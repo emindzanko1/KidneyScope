@@ -172,3 +172,6 @@ cython_debug/
 
 # Ignore virtual environments
 server/venv/
+
+# Ignore H5 model files
+*.h5
