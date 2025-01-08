@@ -1,0 +1,7 @@
+.error {
+    color: #ff4d4d;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    animation: fadeIn 0.8s ease-in-out;
+}

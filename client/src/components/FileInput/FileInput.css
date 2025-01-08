@@ -1,0 +1,54 @@
+.upload-section input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file-count {
+    margin: 10px 0px;
+    font-size: 1rem;
+    color: #555;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    border: 1px solid yellowgreen;
+    /* background-color: yellowgreen; */
+    /* background-color: linear-gradient(135deg, #4caf50, #66bb6a); */
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-image-source: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    border-radius: 8px;
+    border-width: 5pt;
+    border-image-slice: 1;
+    color: white;
+    padding: 0.5rem;
+    border: double 3px transparent;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147)),
+        linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.file-input {
+    margin: 20px 0;
+    padding: 10px;
+    width: 80%;
+    border-radius: 8px;
+    /* border: 2px solid #66bb6a; */
+    border: 2px solid #fff;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-input:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

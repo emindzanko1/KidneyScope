@@ -1,0 +1,20 @@
+.title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: slideIn 0.8s ease-out;
+}
+
+.description {
+    font-size: 1rem;
+    /* color: #f1f1f1; */
+    color: #e8f5e9;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 2rem;
+    }
+}

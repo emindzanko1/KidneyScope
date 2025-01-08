@@ -1,0 +1,27 @@
+.upload-button,
+.reset-button {
+    padding: 12px 25px;
+    /* background-color: #ff5c5c; */
+    /* background-color: #4caf50; */
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.upload-button:hover,
+.reset-button:hover {
+    /* transform: translateY(-4px); */
+    /* background-color: #ff3d3d; */
+    /* background-color: #45a049; */
+    background: linear-gradient(to right, rgb(162, 224, 126), rgb(31, 119, 127));
+}
+
+.upload-button:active {
+    transform: translateY(2px);
+}
