@@ -175,3 +175,6 @@ server/venv/
 
 # Ignore H5 model files
 *.h5
+
+# Ignore temp_image.jpg as it is a temporary file used for processing.
+temp_image.jpg
