@@ -1,8 +1,6 @@
 .upload-button,
 .reset-button {
     padding: 12px 25px;
-    /* background-color: #ff5c5c; */
-    /* background-color: #4caf50; */
     background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
     border: none;
     border-radius: 8px;
@@ -16,9 +14,6 @@
 
 .upload-button:hover,
 .reset-button:hover {
-    /* transform: translateY(-4px); */
-    /* background-color: #ff3d3d; */
-    /* background-color: #45a049; */
     background: linear-gradient(to right, rgb(162, 224, 126), rgb(31, 119, 127));
 }
 

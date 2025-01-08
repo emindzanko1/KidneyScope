@@ -60,7 +60,6 @@ const App = () => {
   };
 
   const handleFileChange = (e) => {
-    console.log('tu');
     const selectedFiles = Array.from(e.target.files);
     const validFiles = selectedFiles.filter((file) => file.type.startsWith('image/'));
     if (validFiles.length !== selectedFiles.length) {
@@ -112,16 +111,6 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      {/* <MainContent
-        files={files}
-        results={results}
-        error={error}
-        isLoading={isLoading}
-        isUploaded={isUploaded}
-        onFileChange={handleFileChange}
-        onUpload={handleUpload}
-        onReset={handleReset}
-      /> */}
       <main className="main">
         <div className="main-container">
           <div className="app-container">
@@ -131,30 +120,11 @@ const App = () => {
               {!isUploaded && (
                 <>
                   <FileInput files={files} handleFileChange={handleFileChange} />
-                  {/* <label htmlFor="file-upload" className="file-label">
-                    Choose Files
-                  </label>
-                  <input
-                    id='file-upload'
-                    type="file"
-                    className="file-input"
-                    onChange={handleFileChange}
-                    multiple
-                  />
-                  {files.length > 0 && (
-                    <p className="file-count">
-                      {files.length} file{files.length > 1 ? 's' : ''} selected
-                    </p>
-                  )} */}
                   {files.length > 0 &&
                     <Button
                       className="upload-button"
                       onClick={handleUpload}
                       text={isLoading ? 'Processing...' : 'Upload and Predict'} />
-                    // <button className='upload-button'
-                    //   onClick={handleUpload} >
-                    //   {isLoading ? 'Processing...' : 'Upload and Predict'}
-                    // </button>
                   }
                 </>
               )}
@@ -164,13 +134,9 @@ const App = () => {
                   className="reset-button"
                   onClick={handleReset}
                 />
-                // <button className="reset-button" onClick={handleReset}>
-                //   Reset Images
-                // </button>
               )}
             </div>
           </div>
-
           {results.length > 0 && (
             <ResultsSlider results={results} />
           )}
@@ -182,61 +148,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-// const handleUpload = async () => {
-//   if (!file) {
-//     alert('Please upload a CT scan before submitting.');
-//     return;
-//   }
-
-//   const formData = new FormData();
-//   formData.append('file', file);
-
-//   setLoading(true);
-//   try {
-//     const response = await fetch('/api/analyze', {
-//       method: 'POST',
-//       body: formData,
-//     });
-
-//     if (!response.ok) {
-//       throw new Error('Error analyzing the file');
-//     }
-
-//     const result = await response.json();
-//     setAnalysisResult(result);
-//   } catch (error) {
-//       console.log(error);
-//     alert('Failed to analyze the scan. Please try again.');
-//   } finally {
-//     setLoading(false);
-//   }
-// };
-
-//  Upload your CT scans and access cutting-edge insights for optimal care.
-
-{/* <div className="upload-section">
-          <input type="file" accept="image/*, .dcm" onChange={handleFileChange} />
-          <button onClick={handleUpload} disabled={loading}>
-            {loading ? 'Analyzing...' : 'Upload and Analyze'}
-          </button>
-        </div>
-
-        {analysisResult && (
-          <div className="results">
-            <h2>Analysis Results</h2>
-            <p><strong>Diagnosis:</strong> {analysisResult.diagnosis}</p>
-            <p><strong>Confidence:</strong> {analysisResult.confidence}%</p>
-
-            <div className="segmented-image">
-              <h3>Segmented Image</h3>
-              <img src={analysisResult.segmentedImageUrl} alt="Segmented CT" />
-            </div>
-
-            <p className="recommendation">
-              <strong>Recommendation:</strong> {analysisResult.recommendation}
-            </p>
-          </div>
-        )} */}

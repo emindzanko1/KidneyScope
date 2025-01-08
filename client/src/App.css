@@ -43,7 +43,6 @@
 }
 
 .content {
-  /* background: linear-gradient(135deg, #6b6bfc, #5f89ff); */
   background: linear-gradient(135deg, #4caf50, #66bb6a);
   border-radius: 12px;
   font-size: 1.2rem;
@@ -67,43 +66,6 @@
   justify-content: space-between;
   align-items: flex-start;
 }
-
-/* .reset-button {
-  background-color: #ff4d4d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 15px;
-}
-
-.reset-button:hover {
-  background-color: #e60000;
-} */
-
-/* @keyframes slideIn {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-} */
 
 @media (max-width: 600px) {
   .title {

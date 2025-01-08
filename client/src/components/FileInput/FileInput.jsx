@@ -1,8 +1,6 @@
 import './FileInput.css';
 
 const FileInput = ({ files, handleFileChange }) => {
-    console.log(files);
-    console.log('emin');
     return (
         <>
             <label htmlFor="file-upload" className="file-label">
