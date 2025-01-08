@@ -20,3 +20,9 @@
 .upload-button:active {
     transform: translateY(2px);
 }
+
+@media (max-width: 600px) {
+    .upload-button {
+      font-size: 1rem;
+    }
+  }

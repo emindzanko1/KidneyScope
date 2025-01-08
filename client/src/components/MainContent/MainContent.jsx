@@ -5,6 +5,7 @@ import ContentHeader from "../ContentHeader/ContentHeader";
 import ErrorMessage from "../Error/ErrorMessage";
 import FileInput from "../FileInput/FileInput";
 import ResultsSlider from "../ResultsSlider/ResultsSlider";
+import './MainContent.css';
 
 const MainContent = () => {
     const [files, setFiles] = useState([]);
@@ -82,7 +83,7 @@ const MainContent = () => {
           const response = await axios.post('http://127.0.0.1:5000/predict', formData, {
             headers: { 'Content-Type': 'multipart/form-data' },
           });
-          return { file: resizedFile, diagnosis: response.data.diagnosis };
+          return { file: resizedFile, diagnosis: response.data.predicted_class};
         } catch (error) {
           console.error('Error uploading file:', error);
           return { file: resizedFile, diagnosis: 'Error processing the image' };
