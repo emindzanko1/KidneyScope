@@ -117,7 +117,7 @@ const AppContent = ({ setResults }) => {
                 )}
                 {isUploaded && (
                     <Button
-                        text="Reset Images"
+                        text={files.length === 1 ? "Reset Image" : "Reset Images"}
                         className="reset-button"
                         onClick={handleReset}
                     />

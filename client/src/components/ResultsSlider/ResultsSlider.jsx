@@ -1,44 +1,46 @@
 import Slider from "react-slick";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import SegmentedImage from '../SegmentedImage/SegmentedImage';
 import './ResultsSlider.css';
 
 const ResultsSlider = ({ results }) => {
+    const CustomNextArrow = (props) => (
+        <div {...props} className="custom-arrow next-arrow">
+            <FaArrowRight />
+        </div>
+    );
+
+    const CustomPrevArrow = (props) => (
+        <div {...props} className="custom-arrow prev-arrow">
+            <FaArrowLeft />
+        </div>
+    );
+
     const sliderSettings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        nextArrow: <CustomNextArrow />,
+        prevArrow: <CustomPrevArrow />,
     };
 
     return (
         <div className="results-container">
             {results.length === 1 ? (
-                <div className="segmented-image">
-                    <img
-                        src={URL.createObjectURL(results[0].file)}
-                        alt="Uploaded"
-                        className="result-image"
-                    />
-                    <p className="diagnosis">Diagnosis: {results[0].diagnosis}</p>
-                </div>
+                <SegmentedImage file={results[0].file} diagnosis={results[0].diagnosis} />
             ) : (
                 <div className="slider-wrapper">
                     <Slider {...sliderSettings}>
                         {results.map((result, index) => (
-                            <div key={index} className="segmented-image">
-                                <img
-                                    src={URL.createObjectURL(result.file)}
-                                    alt={`Uploaded ${index}`}
-                                    className="result-image"
-                                />
-                                <p className="diagnosis">Diagnosis: {result.diagnosis}</p>
-                            </div>
+                            <SegmentedImage key={index} file={result.file} diagnosis={result.diagnosis} />
                         ))}
                     </Slider>
                 </div>
             )}
         </div>
-    )
-}
+    );
+};
 
 export default ResultsSlider;

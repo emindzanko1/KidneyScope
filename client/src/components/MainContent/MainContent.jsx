@@ -10,7 +10,6 @@ const MainContent = () => {
         <main className="main">
             <div className="main-container">
                 <AppContent setResults={setResults}/>
-                {/* TODO: Make new css for second box */}
                 {results.length > 0 && (
                     <ResultsSlider results={results} />
                 )}
