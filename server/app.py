@@ -23,7 +23,6 @@ def prepare_image(img_path):
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    print("emin")
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
 
