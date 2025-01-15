@@ -58,3 +58,19 @@
         transform: translateY(0);
     }
 }
+
+.download-pdf-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: white;
+    background: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.download-pdf-button:hover {
+    background: #388e3c;
+}
